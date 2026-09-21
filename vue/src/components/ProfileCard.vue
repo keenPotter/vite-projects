@@ -1,0 +1,88 @@
+<template>
+  <div class="profile-card">
+    <div class="profile-header">
+      <h3 class="profile-name">{{ name }}</h3>
+    </div>
+    <div class="profile-body">
+      <p class="profile-email">
+        <span class="label">Email:</span>
+        <a :href="`mailto:${email}`">{{ email }}</a>
+      </p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ProfileCard',
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
+<style scoped>
+.profile-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ffffff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.profile-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.profile-header {
+  margin-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-body {
+  margin: 0;
+}
+
+.profile-email {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.label {
+  font-weight: 500;
+  color: #444;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.profile-email a {
+  color: #0066cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.profile-email a:hover {
+  text-decoration: underline;
+}
+</style>
