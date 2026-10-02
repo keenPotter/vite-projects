@@ -1,6 +1,6 @@
-import './assets/main.css'
-
+import './global.css'  // Add this line
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.mount('#app')
