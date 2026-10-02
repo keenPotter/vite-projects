@@ -68,3 +68,62 @@ h1 {
     letter-spacing: 2px;
   }
 }
+
+.location-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding-bottom: 40px;
+  color: #ffffff;
+}
+
+/* Share My Location button + the file picker button */
+.location-section button,
+.location-section input[type="file"]::file-selector-button {
+  background: #ffffff;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.location-section button:hover,
+.location-section input[type="file"]::file-selector-button:hover {
+  background: #e5e7eb;
+}
+
+.location-section button:active {
+  transform: scale(0.97);
+}
+
+.location-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* File input text ("No file chosen") */
+.location-section input[type="file"] {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.location-section input[type="file"]::file-selector-button {
+  margin-right: 12px;
+}
+
+/* Result and error text */
+.location-section p {
+  margin: 0;
+  text-align: center;
+}
+
+.location-section a {
+  color: #ffffff;
+  text-decoration: underline;
+}
